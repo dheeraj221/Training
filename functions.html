@@ -1,0 +1,70 @@
+<html>
+	<head>
+		FOR SYNTEX, VIEW PAGE SOURCE
+	</head>
+	<body>
+		<h2>JavaScript Types of Function</h2>
+		<h4> Normal Function: </h4>
+		<p id="demo1"></p>
+		
+		<h4> Immediate Function: </h4>
+		<p id="demo2"></p>
+
+		<h4> Immediate Function with parameter:</h4>
+		<p id="demo3">
+
+		<h4> Anonymous Function:</h4>
+		<p id="demo4"></p>
+		
+		<h4> Arrow Function:</h4>
+		<p id="demo5"></p>
+
+		<h4> Nested Function:</h4>
+		<p id="demo6"></p>
+		<p id="demo7"></p>
+	</body>
+	<script>
+		// Normal Function
+		function add(x, y) {
+			return x + y;
+ 		}
+ 		document.getElementById("demo1").innerHTML= add(10,20);
+
+ 		// Immediate Function
+ 		document.getElementById("demo2").innerHTML= (function() {
+			return "Hiii";
+ 		})()
+
+ 		// Immediate Function with parameter
+ 		my_name = "Dheeraj"
+ 		document.getElementById("demo3").innerHTML= (function(aaa) {
+			return "Hii "+aaa;
+ 		})(my_name);
+
+ 		// Anonymous Function
+		var d = function(a , b){
+			return a * b;
+ 		}
+ 		document.getElementById("demo4").innerHTML= d(7,8);
+ 		
+ 		// Arrow Function
+ 		var func1 = (a , b) => {
+			return a - b;
+ 		}
+ 		document.getElementById("demo5").innerHTML= func1(18,8);
+
+ 		// Nested Function
+ 		input1 = "This is outer function";
+ 		function outerFunction(para1) {
+ 			document.getElementById("demo6").innerHTML= para1;
+			input2 = "This is inner function"; 	
+			function innerFunction(para2) {
+				document.getElementById("demo7").innerHTML= para2;
+			}
+			innerFunction(input2);
+ 		}
+ 		outerFunction(input1);
+	</script>
+	
+</html>
+
